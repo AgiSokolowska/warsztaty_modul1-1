@@ -15,9 +15,9 @@ html {
 .fixed-width {
   width: 1000px;
   margin: 0 auto;
-  padding-top: 2em;
-  padding-bottom: 2em;
-  overflow: auto;
+  /* brzydkie ale działa - do poprawki! */
+  padding-top: .5em;
+  padding-bottom: 2.5em;
 }
 
 a {
@@ -27,7 +27,7 @@ a {
 }
 
 nav {
-  overflow:visible;
+  overflow: visible;
 }
 
 /*HEADER- - - - - - -
@@ -59,6 +59,7 @@ header nav ul {
 header nav ul > li {
   display: inline-block;
   margin-top: .4em;
+  position: relative;
 }
 
 header nav ul li a {
@@ -67,4 +68,11 @@ header nav ul li a {
 
 header nav ul ul {
   display: none;
+  background-color: black;
+}
+
+header nav ul li:hover ul {
+  position: absolute;
+  display: block;
+
 }
